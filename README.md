@@ -3,6 +3,11 @@ This role changes the WLAN key of a given SSID on the Unifi controller remotely.
 You can enter your own key or have a randomized one created. 
 The change will be announced via e-mail.
 
+# Setup
+Change wifikeyset to True if you want to be prompted to enter a key.
+Alternatively you can write a wifi key without prompt in wifi_key (remove the lookup entry for this).
+
+
 # Parameters
 unifiuser:
 unifipassword:
