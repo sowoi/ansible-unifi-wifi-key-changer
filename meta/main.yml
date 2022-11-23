@@ -1,6 +1,5 @@
 ---
 galaxy_info:
-  role_name: unifi-wifi-key-changer
   author: Massoud Ahmed
   description: This role changes the WLAN key of a given SSID on the Unifi controller remotely.
   company: https://okxo.de
