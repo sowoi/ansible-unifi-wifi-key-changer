@@ -1,0 +1,39 @@
+---
+galaxy_info:
+  role_name: unifi-wifi-key-changer
+  author: Massoud Ahmed
+  description: This role changes the WLAN key of a given SSID on the Unifi controller remotely.
+  company: https://okxo.de
+
+  license: CC-BY-SA
+
+  min_ansible_version: 2.11
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - kinetic
+        - jammy
+        - focal
+
+    - name: Debian
+      versions:
+        - bullseye
+        - buster
+
+    - name: CentOS
+      versions:
+        - 8.4
+
+  galaxy_tags:
+    - ubiquiti
+    - unifi
+    - wifi
+    - network
+    - controller
+    - key
+    - ssid
+
+dependencies: 
+    - community.mongodb
+    - community.general

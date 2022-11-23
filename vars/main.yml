@@ -1,5 +1,5 @@
----
 unifiuser|default('none'):
 unifipassword|default('none'):
 wifissid|default('none'):
+wifikeyset|default(false)|bool: false
 wifi_key: "{{ lookup('password', '/dev/null length=12 chars=ascii_letters') }}"
