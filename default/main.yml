@@ -1,5 +1,1 @@
 ---
-unifiuser|default('none'):
-unifipassword|default('none'):
-wifissid|default('none'):
-wifi_key: "{{ lookup('password', '/dev/null length=12 chars=ascii_letters') }}"

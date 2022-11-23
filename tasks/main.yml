@@ -1,7 +1,12 @@
 ---
-- name: Check if wifi key is set
-  command: echo "Wifi key is set"
-  notify: "prompt wifikey"
+- name: prompt wifikey
+  pause:
+    prompt: "Please enter wifi key"
+    echo: no
+  register: wifikeyInput
+
+- set_fact:
+   wifi_key: "{{ wifikeyInput.user_input }}"
   when: wifikeyset | bool
 
 - name: Searching SSID in MongoDB
@@ -47,3 +52,4 @@
       Cookie: "{{ login.cookies_string }}"
   with_items: "{{ devices | community.general.json_query('*.data[*].mac') }}"
   register: mac
+  notify: Send email

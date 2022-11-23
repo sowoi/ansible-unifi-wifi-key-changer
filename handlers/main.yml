@@ -1,8 +1,10 @@
-- name: prompt wifikey
-  pause:
-    prompt: "Please enter wifi key"
-    echo: no
-  register: wifikeyInput
-
-- set_fact:
-   wifi_key: "{{ wifikeyInput.user_input }}"
+- name: Send email
+  community.general.mail:
+    host: {{ mailHost }}
+    port: {{ mailSMTPPort }}
+    username: {{ mailUsername }}
+    password: {{ mailPassword }}
+    to: {{ mailSendTo }}
+    subject: Change wifi key
+    body: Changed wifi key from {{ old_wifi_key }} to {{ wifi_key }}
+  delegate_to: localhost
