@@ -19,7 +19,8 @@ mailSendTo:
 None
 
 # Example Playbook
-``` - hosts: servers
+``` 
+- hosts: servers
      roles:
        - unifi-wifi-key-changer
 ```
