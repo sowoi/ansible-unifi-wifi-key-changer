@@ -22,7 +22,7 @@ None
 ``` 
 - hosts: servers
   roles:
-    - unifi-wifi-key-changer
+    - sowoi.ansible_unifi_wifi_key_changer
 ```
 
 # License
