@@ -1,4 +1,9 @@
 ---
+- name: Check if wifi key is set
+  command: echo "Wifi key is set"
+  notify: "prompt wifikey"
+  when: wifikeyset | bool
+
 - name: Searching SSID in MongoDB
   community.mongodb.mongodb_shell:
     login_host: localhost

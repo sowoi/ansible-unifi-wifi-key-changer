@@ -1,14 +1,8 @@
-tasks:
-  - name: Prompt wifi key
-    command: echo "Please enter the desired WLAN key in the next step"
-    when: wifikeyset == True
-
-
-handlers:
-
-  - pause:
+- name: prompt wifikey
+  pause:
     prompt: "Please enter wifi key"
     echo: no
-    register: wifikeyInput
-  - set_fact:
-    wifi_key: "{{ wifikeyInput.user_input }}"
+  register: wifikeyInput
+
+- set_fact:
+   wifi_key: "{{ wifikeyInput.user_input }}"
