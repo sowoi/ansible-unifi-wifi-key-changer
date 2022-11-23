@@ -35,5 +35,4 @@ galaxy_info:
     - ssid
 
 dependencies: 
-    - community.mongodb
-    - community.general
+
