@@ -31,7 +31,7 @@ None
 ```
 
 # License
-Licensed under the terms of Apache License Version 2. See LICENSE file.
+Licensed under the terms of GNU General Public License v3.0. See LICENSE file.
 
 # Author Information
 https://okxo.de
